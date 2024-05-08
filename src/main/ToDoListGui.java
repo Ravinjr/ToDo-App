@@ -24,10 +24,11 @@ public class ToDoListGui extends JFrame implements ActionListener{
     }
     private void addGuiComponents(){
         // banner text
-        JLabel bannerLabel=new JLabel("To Do List");
-        bannerLabel.setFont(createFont("LEMONMILK-Light.otf",36f));
+        JLabel bannerLabel = new JLabel("To Do List");
+        //bannerLabel.setFont(createFont("LEMONMILK-Light.otf",36f)); // Set font size to 36f
+        bannerLabel.setFont(new Font(Font.DIALOG_INPUT,Font.PLAIN,40));
         bannerLabel.setBounds(
-                (CommonConstants.GUI_SIZE.width - bannerLabel.getPreferredSize().width)/2,
+                (CommonConstants.GUI_SIZE.width - bannerLabel.getPreferredSize().width) / 2,
                 15,
                 CommonConstants.BANNER_SIZE.width,
                 CommonConstants.BANNER_SIZE.height
@@ -58,6 +59,7 @@ public class ToDoListGui extends JFrame implements ActionListener{
         // add task button
         JButton addTaskButton=new JButton("add task");
         //addTaskButton.setFont(createFont("LEMONMILK-Light.otf",26f));
+        addTaskButton.setFont(new Font(Font.DIALOG,Font.BOLD,20));
         addTaskButton.setBounds(-5,CommonConstants.GUI_SIZE.height-88,
                 CommonConstants.ADD_TASK_BUTTON_SIZE.width,CommonConstants.ADD_TASK_BUTTON_SIZE.height);
         addTaskButton.addActionListener(this);

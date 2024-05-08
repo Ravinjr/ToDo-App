@@ -53,8 +53,8 @@ public class TaskComponent extends JPanel implements ActionListener {
         deleteButton.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
 
         // add to this task component
-        add(taskField);
         add(checkBox);
+        add(taskField);
         add(deleteButton);
     }
 
